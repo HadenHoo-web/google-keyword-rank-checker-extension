@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "BuffSEO Rank Checker",
+  "version": "1.0.0",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://www.google.com.vn/*",
+    "https://52.buffdemo.com/*",
+    "https://suggestqueries.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://52.buffdemo.com/*",
+        "https://www.google.com/*",
+        "https://www.google.com.vn/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icon.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
