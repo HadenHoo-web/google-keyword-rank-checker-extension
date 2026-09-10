@@ -62,5 +62,4 @@ No unnecessary libraries or complicated setup.
 
 You can add screenshots to:
 
-```text
-/screenshots
+![Rank Checker Chrome Extension](screenshots/rank-checker-extension.png)
